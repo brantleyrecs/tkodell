@@ -5,10 +5,10 @@
 function Home() {
   // const { user } = useAuth(); // TODO: COMMENT IN FOR AUTH
 
-  const user = { displayName: 'Dr. T' }; // TODO: COMMENT OUT FOR AUTH
+  // const user = { displayName: 'Brundle' }; // TODO: COMMENT OUT FOR AUTH
   return (
     <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
+      className="text-center d-flex flex-column"
       style={{
         height: '90vh',
         padding: '30px',
@@ -16,7 +16,7 @@ function Home() {
         margin: '0 auto',
       }}
     >
-      <h1>Hello {user.displayName}! </h1>
+      <h1>K<span>i</span>le Odell</h1>
     </div>
   );
 }
