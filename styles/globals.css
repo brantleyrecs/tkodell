@@ -30,3 +30,8 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+
+.image {
+  border-radius: 50px;
+  /* box-shadow: 20px 20px 50px #fdfdfd; */
+}
