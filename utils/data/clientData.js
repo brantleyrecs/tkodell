@@ -45,4 +45,22 @@ const createClient = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getClients, getSingleClient, createClient };
+const updateClient = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/clients/${payload.firebaseKey}.json`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+export {
+  getClients,
+  getSingleClient,
+  createClient,
+  updateClient,
+};
