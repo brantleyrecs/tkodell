@@ -20,5 +20,16 @@ const getClients = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// eslint-disable-next-line import/prefer-default-export
-export { getClients };
+const getSingleClient = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/clients/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+export { getClients, getSingleClient };
